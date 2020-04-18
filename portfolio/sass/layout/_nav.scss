@@ -1,0 +1,44 @@
+header {
+  background-color: white;
+  box-shadow: 0px 3px 10px 0px lighten($black, 70%);
+  position: fixed;
+  width: 100%;
+  .navbar {
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    .brand-container {
+      a.brand {
+        img {
+          width: 100px;
+        }
+      }
+    }
+
+    .nav {
+      @include sm {
+        display: none;
+      }
+      margin-left: auto;
+      list-style: none;
+
+      .nav-item {
+        &:not(:last-child) {
+          margin-right: space(8);
+        }
+
+        .nav-link {
+          text-decoration: none;
+          color: lighten($black, 30%);
+          font-size: $font - 1;
+          transition: all 400ms;
+          text-transform: capitalize;
+          padding: space(2.5);
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
